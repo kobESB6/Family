@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Kaushan+Script&family=Oswald:wght@200..700&display=swap');
+
+
+:root {
+  --primary-color: rgb(150,65,255);
+  --primary-variant: rgb(3, 86, 228);
+  --secondary-color: #15f1d4;
+  --on-primary: rgb(250, 250, 250);
+  --on-background-alt: rgba(250, 250, 250, 0.7);
+  --background: #121212;
+  --on-background: rgba(66, 66, 66, 0.7);
+  --background: rgb(255, 255, 255);
+  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--primary-color);
+  font-family: Comfortaa, sans-serif;
+  background-color: #f2eff6;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23813cf0' fill-opacity='0.26'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+section {
+  min-height: 100vh;
+  display: inlflex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+h1  {
+  font-family: Kaushan Script, sans-serif;
+  text-align: center;
+  margin-bottom: 0px;
+  font-size:  100px;
+
+}
+  
+h2 {
+  color: var(--on-background--alt);
+  text-align: center;
+  font-size: 32px;
+  font-weight: normal;
+}
+nav {
+  z-index: 10;
+  position: fixed;
+  font-family: Oswald, sans-serif;
+  font-size: 24px;
+  letter-spacing: 3px;
+  top: 0;
+  padding: 25px;
+  width: 100vw;
+  background: rgb(255 255 255 / 50%);
+}
+
+a {
+  margin-right: 25px;
+  color: var(--on-background--alt);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+a:hover {
+  color: var(--primary-variant);
+  text-decoration: underline;
+}
+
+.events-container { 
+  display: block;
+  flex-wrap: wrap;
+  border: 1px solid var(--primary-variant);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 25px;
+  width: 350px;
+  height: 600px;
+  background: var(--background);
+  box-shadow: var(--box-shadow); 
+  text-align: center;
+}
+  
+#events {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.event-img {
+  margin: 10px;
+  height: 275px;
+  width: 300px;
+
+}
+
+
+button {
+  background-color: var(--on-primary);
+  color: var(--primary-color);
+  font-family: sans-serif;
+  border-radius: 10px;
+  border-color: var(--primary-color);
+  box-shadow: 20px;
+}
+.events-link {
+  display: block; /* Make the link fill the box width */
+  text-decoration: none; /* Remove underline from link */
+  color: #f0f0f0/* Example link color */
+  /* Add other link styles, such as font-weight, etc. */
+}
+
+.events-link:hover {
+  text-decoration: underline;
+  /* Add underline on hover */
+  /* Add other hover styles, such as color, etc. */
+}
+
