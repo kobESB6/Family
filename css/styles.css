@@ -116,8 +116,7 @@ a:hover {
 .events-container {
   display: flex;
   flex-direction: flex-start;
-  align-items: baseline;
-  
+  flex: 0 0 0 200px;   
   width: 100vw;
   height: 75vh;
 }
@@ -133,7 +132,7 @@ a:hover {
 .event-content {
   display: flex;
   flex-direction: column;
-flex: 0 0 0 400px;
+
   color: var(--primary-variant);
   background-color: var(--on-primary);
   width: 100%;
@@ -171,7 +170,7 @@ button:hover {
   font-family: sans-serif;
   border-radius: 10px;
   border-color: var(--primary-color);
-  margin: 0 1px;
+  margin: 0 30px;
 
   box-shadow: 20px;
 }
