@@ -121,7 +121,7 @@ a {
 
 a:hover {
   background-color: var(--primary-color);
-  color: var(--on-primary);
+  color: var(--primary-variant);
   text-decoration: underline;
 }
 
@@ -151,7 +151,8 @@ a:hover {
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
-  padding: 50px;
+  padding: 20px;
+  margin-bottom: auto;
  
 }
 
@@ -167,7 +168,10 @@ button:hover {
 
 /* Contact */
 #committee p {
-  display: inline;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  margin: 15px;
 
 }
 
@@ -180,7 +184,7 @@ button:hover {
 }
 
 
-.btn {
+button {
   background-color: var(--on-primary);
   color: var(--primary-color);
   font-family: sans-serif;
