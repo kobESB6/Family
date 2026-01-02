@@ -67,7 +67,10 @@ section .event {
   align-items: center;
 }
 p {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
    font-size: 18px;
   color: var(--secondary-color);
   align-items: center;
@@ -110,13 +113,17 @@ nav {
 }
 
 a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-right: 25px;
   color: var(--on-background--alt);
   text-decoration: none;
   border-bottom: 3px solid transparent;
   font-weight: bold;
   font-size: 15px;
-  justify-content: right;
+ 
 }
 
 a:hover {
