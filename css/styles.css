@@ -31,6 +31,15 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23813cf0' fill-opacity='0.26'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+/* Reunion logo */
+.logo {
+  width: 150px;
+  height: auto;
+  margin-right: 20px; 
+  position: relative;
+}
+
+
 /* Section */
 section {
   min-height: 100vh;
@@ -38,28 +47,38 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center; 
+  padding: 48px 18px;
 }
 
 section .event {
   min-height: 50vh;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-/* Home */
-#home {
-    min-height: 50vh;
-  display: inline-block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
+}
+/* WRAP CONTENT IN A CARD LOOK */
+.content-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 22px;
+  background: rgba(255, 255, 255, 0.50);
+  border: 1px solid rgba(130, 60, 240, 0.20);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Home */
+#home {
+  min-height: 50vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
 
-/* About  */
-.about-container {
+/* Updates */
+.updates-container {
     min-height: 50vh;
   display: inline-block;
   flex-direction: column;
@@ -67,33 +86,40 @@ section .event {
   align-items: center;
 }
 p {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-   font-size: 18px;
+  max-width: 70ch;             /* perfect reading width */
+  margin: 12px auto;
+  font-size: 1.05rem;
   color: var(--secondary-color);
   align-items: center;
-   padding: 0px 10rem;
+  padding: 20px 10rem;
   
 }
 
 ul li {
+  display: list-item;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 10px;
+  color: var(--secondary-color);
 }
 
-h1  {
-  color: var(--primary-color);
+  h1{
+  margin: 0;
   font-family: Kaushan Script, sans-serif;
+  color: var(--primary-color);
   text-align: center;
-  margin-bottom: 0px;
-  margin-top: 100px;
-  font-size:  100px;
-
+  font-size: clamp(2.5rem, 7vw, 6rem);
 }
+;
+
   
-h2 {
+h2, h3 {
   color: var(--secondary-color);
   text-align: center;
   font-size: 32px;
@@ -102,7 +128,7 @@ h2 {
 /* Nav Bar */
 nav {
   z-index: 10;
-  position: fixed;
+  position: sticky;
   font-family: Oswald, sans-serif;
   font-size: 24px;
   letter-spacing: 3px;
@@ -111,7 +137,18 @@ nav {
   width: 100vw;
   background: rgb(255 255 255 / 50%);
 }
-
+#nav a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  color: var(--on-background--alt);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+  font-size: 15px;
+}
 a {
   display: flex;
   flex-direction: row;
@@ -123,55 +160,71 @@ a {
   border-bottom: 3px solid transparent;
   font-weight: bold;
   font-size: 15px;
- 
 }
 
 a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--on-primary);
   color: var(--primary-variant);
   text-decoration: underline;
+  font-size: xx-large;
 }
 
 
-/* Events/Activities */
-.events-container {
-  display: flex;
-  flex-direction: flex-start;
-  flex: 0 0 0 200px;   
-  width: 100vw;
-  height: 75vh;
+/* Events layout */
+.events-container{
+  width: min(1200px, 100%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  align-items: start;
 }
 
-.event-img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-top: 0rem;
-}
-
-.event-content {
+/* Card */
+.event-content{
   display: flex;
   flex-direction: column;
-  color: var(--primary-variant);
-  background-color: var(--on-primary);
+  gap: 12px;
+  padding: 18px;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(130, 60, 240, 0.20);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+/* Image */
+.event-img{
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
-  padding: 20px;
-  margin-bottom: auto;
- 
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.event-content h5 {
-  font-weight: bold;
-  margin-top: 20px;
+/* Button-link */
+.btn{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: auto; /* pushes button to bottom of card */
 }
 
-button:hover {
- background-color: var(--primary-color);
- color: var(--on-primary);
+.btn:hover{
+  background: var(--primary-color);
+  color: var(--on-primary);
 }
+
+/* Responsive */
+@media (max-width: 900px){
+  .events-container{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Contact */
 #committee p {
@@ -230,5 +283,4 @@ li {
   padding: 25px;
   width: 100vw;
   background: rgb(255 255 255 / 50%);
-
 }
