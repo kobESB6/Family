@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Family Reunion App",
+			"path": ".."
+		},
+		{
+			"name": "CraigFamily Reunion images ",
+			"path": "../../../../CraigFamily Reunion images "
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Family Reunion App"
+	}
+}

@@ -133,12 +133,12 @@ nav {
   font-size: 24px;
   letter-spacing: 3px;
   top: 0;
-  padding: 25px;
+  padding: 10 px;
   width: 100vw;
   background: rgb(255 255 255 / 50%);
 }
 #nav a {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
