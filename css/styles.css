@@ -85,30 +85,31 @@ section .event {
   justify-content: center;
   align-items: center;
 }
-p {
-  display: block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  max-width: 70ch;             /* perfect reading width */
+/* Reading-width paragraphs — only inside .prose containers */
+.prose p {
+  max-width: 70ch;
   margin: 12px auto;
   font-size: 1.05rem;
   color: var(--secondary-color);
-  align-items: center;
-  padding: 10px 10rem;
-  
+  padding: 10px 0;
 }
 
-ul li {
-  display: list-item;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+.card p {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card paragraphs stay compact and fill their card */
+.card-text {
+  margin: 0;
   color: var(--secondary-color);
 }
 
+ul li {
+  padding: 10px;
+  color: var(--secondary-color);
+}
   h1{
   margin: 0;
   font-family: Kaushan Script, sans-serif;
